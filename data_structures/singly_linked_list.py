@@ -47,13 +47,11 @@ class SingleListNode:
             counter += 1
             curr_node = curr_node.next
 
+    def get_int_in_inv_list(self):
+        rev_int, curr_node = '', self
 
-#  Helper function
-def get_int_in_inv_list(lst):
-    rev_int, curr_node = '', lst
+        while curr_node:
+            rev_int += str(curr_node.data)
+            curr_node = curr_node.next
 
-    while curr_node:
-        rev_int += str(curr_node.data)
-        curr_node = curr_node.next
-
-    return int(rev_int[::-1])
+        return int(rev_int[::-1])

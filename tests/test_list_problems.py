@@ -54,23 +54,17 @@ class TestLoopFinding:
 class TestIntegerAddition:
     def test_add_inverted_integer_lists(self):
         # 9901 + 237 = 10138
-        assert get_int_in_inv_list(
-            add_inv_int_lists(
+        assert add_inv_int_lists(
                 SingleListNode().append_multi(['1', '0', '9', '9']),
                 SingleListNode().append_multi(['7', '3', '2'])
-            )
-        ) == 10138
+            ).get_int_in_inv_list() == 10138
         # 199 + 1 = 200
-        assert get_int_in_inv_list(
-            add_inv_int_lists(
+        assert add_inv_int_lists(
                 SingleListNode().append_multi(['9', '9', '1']),
                 SingleListNode().append_multi(['1'])
-            )
-        ) == 200
+            ).get_int_in_inv_list() == 200
         # 45 + 20 = 65
-        assert get_int_in_inv_list(
-            add_inv_int_lists(
+        assert add_inv_int_lists(
                 SingleListNode().append_multi(['5', '4', '0']),
                 SingleListNode().append_multi(['0', '2', '0', '0'])
-            )
-        ) == 65
+            ).get_int_in_inv_list() == 65
