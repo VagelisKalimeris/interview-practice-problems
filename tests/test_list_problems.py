@@ -47,7 +47,7 @@ class TestLoopFinding:
         assert not find_loop_in_list(test_list)
 
     def test_existing_loop(self, test_list):
-        create_loop_in_list(test_list, 2, 5)
+        test_list.create_loop_in_list(2, 5)
         assert find_loop_in_list(test_list)
 
 

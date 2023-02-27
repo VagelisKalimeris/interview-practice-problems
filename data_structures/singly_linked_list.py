@@ -1,4 +1,4 @@
-class SingleListNode():
+class SingleListNode:
     def __init__(self, data=None):
         self.data = data
         self.next = None
@@ -33,21 +33,19 @@ class SingleListNode():
 
         return True
 
+    def create_loop_in_list(self, start_node_num, end_node_num):
+        assert start_node_num < end_node_num, 'Loop start/end Error!'
 
-#  Helper function
-def create_loop_in_list(lst, start_node_num, end_node_num):
-    assert start_node_num < end_node_num, 'Loop start/end Error!'
+        curr_node, counter, start_node = self, 0, None
 
-    curr_node, counter, start_node = lst, 0, None
-
-    while curr_node.next:
-        if counter == start_node_num:
-            start_node = curr_node
-        elif counter == end_node_num:
-            curr_node.next = start_node
-            break
-        counter += 1
-        curr_node = curr_node.next
+        while curr_node.next:
+            if counter == start_node_num:
+                start_node = curr_node
+            elif counter == end_node_num:
+                curr_node.next = start_node
+                break
+            counter += 1
+            curr_node = curr_node.next
 
 
 #  Helper function
