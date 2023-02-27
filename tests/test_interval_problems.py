@@ -25,7 +25,7 @@ class TestOverlapMerge:
             []
         ) == []
 
-    # def test_with_no_overlapping_merges(self):
-    #     assert merge_overlapping_intervals(
-    #         [Interval(10, 12), Interval(13, 15)]
-    #     ) == [Interval(10, 12), Interval(13, 15)]
+    def test_with_no_overlapping_merges(self):
+        assert merge_overlapping_intervals(
+            [Interval(10, 12), Interval(13, 15)]
+        ) == [Interval(10, 12), Interval(13, 15)]

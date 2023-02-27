@@ -25,13 +25,11 @@ def merge_overlapping_intervals(intervals):
             elif not inter_a.overlaps(intervals[i + 1]):
                 result.append(inter_a)
                 inter_a = intervals[i + 1]
-
         else:
             result.append(inter_a)
+            if i == interval_count - 1:
+                result.append(inter_b)
             inter_a = inter_b
 
     return result
 
-
-x = merge_overlapping_intervals([Interval(10, 12), Interval(13, 15)])
-print()
