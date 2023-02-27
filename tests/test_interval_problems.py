@@ -16,6 +16,10 @@ class TestOverlapMerge:
         assert merge_overlapping_intervals(
             [Interval(1, 5), Interval(3, 7), Interval(8, 9), Interval(10, 12)]
         ) == [Interval(1, 7), Interval(8, 9), Interval(10, 12)]
+        assert merge_overlapping_intervals(
+            [Interval(1, 5), Interval(3, 7), Interval(8, 9), Interval(9, 10),
+             Interval(10, 11), Interval(11, 12)]
+        ) == [Interval(1, 7), Interval(8, 12)]
 
     def test_edge_intervals(self):
         assert merge_overlapping_intervals(
@@ -29,3 +33,6 @@ class TestOverlapMerge:
         assert merge_overlapping_intervals(
             [Interval(10, 12), Interval(13, 15)]
         ) == [Interval(10, 12), Interval(13, 15)]
+        assert merge_overlapping_intervals(
+            [Interval(1, 2), Interval(3, 7), Interval(8, 9), Interval(10, 12)]
+        ) == [Interval(1, 2), Interval(3, 7), Interval(8, 9), Interval(10, 12)]
