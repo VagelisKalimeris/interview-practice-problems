@@ -28,7 +28,6 @@ def merge_sorted_lists(list_a, list_b):
 
 
 ################################################################################
-################################################################################
 # Objective         : Given a linked list, check if the linked list has a loop #
 #                     or not.                                                  #
 # Time Complexity   : O(n)                                                     #
@@ -39,7 +38,6 @@ def find_loop_in_list(lst):
         return False
 
     one_step_curr, two_step_curr = lst, lst.next
-
     while two_step_curr:
         if one_step_curr == two_step_curr:
             return True
@@ -51,7 +49,6 @@ def find_loop_in_list(lst):
     return False
 
 
-################################################################################
 ################################################################################
 # Objective         : You are given the head pointers of two linked lists      #
 #                     where each linked list represents an inverted integer    #

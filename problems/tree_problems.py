@@ -11,4 +11,5 @@ def identical_trees(root_1, root_2):
             return False
         return identical_trees(root_1.lc, root_2.lc) \
             and identical_trees(root_1.rc, root_2.rc)
+
     return not (root_1 or root_2)

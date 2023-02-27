@@ -1,3 +1,6 @@
+from data_structures.interval import Interval
+
+
 ################################################################################
 # Objective         : Given a list of intervals, sorted by starting timestamps #
 #                     merge all the overlapping intervals to produce a list    #
@@ -5,9 +8,6 @@
 # Time Complexity   : O(n)                                                     #
 # Space Complexity  : O(1)                                                     #
 ################################################################################
-from data_structures.interval import Interval
-
-
 def merge_overlapping_intervals(intervals):
     interval_count = len(intervals)
 

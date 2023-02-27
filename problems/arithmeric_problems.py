@@ -8,10 +8,12 @@ def power(x, n):
     # Edge case
     if n == 0:
         return x if x is 0 else 1
+
     # Base case
     if n == 1:
         return x
 
+    # Recurse
     if n % 2 == 0:
         sub_x = power(x, n / 2)
         return sub_x * sub_x

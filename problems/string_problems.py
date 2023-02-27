@@ -6,11 +6,13 @@
 ################################################################################
 def is_palindrome(s):
     i, j = 0, len(s) - 1
+
     while i <= j:
         if s[i] != s[j]:
             return False
         i += 1
         j -= 1
+
     return True
 
 
@@ -45,6 +47,24 @@ def is_palindrome_relaxed(s, flag=False):
 
 
 ################################################################################
+# Objective         : Given two strings s and t, return true if t is an        #
+#                     anagram of s, and false otherwise.                       #
+# Time Complexity   : O(n)                                                     #
+# Space Complexity  : O(n)                                                     #
+################################################################################
+def is_anagram(s, t):
+    t_list = [x for x in t]
+
+    for x in s:
+        if x in t_list:
+            t_list.remove(x)
+        else:
+            return False
+
+    return t_list == []
+
+
+################################################################################
 # Objective         : Given a sentence, reverse the order of its words,        #
 #                     without affecting the order of letters within a given    #
 #                     word.                                                    #
@@ -53,19 +73,3 @@ def is_palindrome_relaxed(s, flag=False):
 ################################################################################
 def reverse_words_order(sentence):
     return ' '.join(reversed(sentence.split()))
-
-
-################################################################################
-# Objective         : Given two strings s and t, return true if t is an        #
-#                     anagram of s, and false otherwise.                       #
-# Time Complexity   : O(n)                                                     #
-# Space Complexity  : O(n)                                                     #
-################################################################################
-def is_anagram(s, t):
-    t_list = [x for x in t]
-    for x in s:
-        if x in t_list:
-            t_list.remove(x)
-        else:
-            return False
-    return t_list == []
