@@ -4,41 +4,36 @@ from problems.list_problems import *
 
 class TestSortedListMerging:
     def test_sorted_list_merging(self):
-        assert check_identical_lists(
-            merge_sorted_lists(
+        assert merge_sorted_lists(
                 SingleListNode().append_multi([50, 70, 80, 110, 140]),
                 SingleListNode().append_multi([60, 70, 120, 150, 160])
-            ),
+            ).list_is_identical_with(
             SingleListNode().append_multi([50, 60, 70, 70, 80, 110, 120, 140, 150, 160])
         )
-        assert check_identical_lists(
-            merge_sorted_lists(
+        assert merge_sorted_lists(
                 SingleListNode().append_multi([50, 70, 80, 110, 140]),
                 SingleListNode().append_multi([10, 20, 120, 160])
-            ),
+            ).list_is_identical_with(
             SingleListNode().append_multi([10, 20, 50, 70, 80, 110, 120, 140, 160])
         )
 
     def test_edge_case_sorted_list_merging(self):
-        assert check_identical_lists(
-            merge_sorted_lists(
+        assert merge_sorted_lists(
                 SingleListNode().append_multi([50, 70, 80, 110, 140]),
                 SingleListNode(0)
-            ),
+            ).list_is_identical_with(
             SingleListNode().append_multi([0, 50, 70, 80, 110, 140])
         )
-        assert check_identical_lists(
-            merge_sorted_lists(
+        assert merge_sorted_lists(
                 SingleListNode(55),
                 SingleListNode().append_multi([10, 20, 120, 160])
-            ),
+            ).list_is_identical_with(
             SingleListNode().append_multi([10, 20, 55, 120, 160])
         )
-        assert check_identical_lists(
-            merge_sorted_lists(
+        assert merge_sorted_lists(
                 SingleListNode().append_multi([50, 70, 80, 110, 140]),
                 SingleListNode().append_multi([0, 1000])
-            ),
+            ).list_is_identical_with(
             SingleListNode().append_multi([0, 50, 70, 80, 110, 140, 1000])
         )
 

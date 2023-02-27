@@ -23,17 +23,15 @@ class SingleListNode():
         if self.next:
             self.next.print()
 
+    def list_is_identical_with(self, other):
+        curr_a, curr_b = self, other
 
-#  Helper function
-def check_identical_lists(list_a, list_b):
-    curr_a, curr_b = list_a, list_b
+        while curr_a or curr_b:
+            if not (curr_a and curr_b) or (curr_a.data != curr_b.data):
+                return False
+            curr_a, curr_b = curr_a.next, curr_b.next
 
-    while curr_a or curr_b:
-        if not (curr_a and curr_b) or (curr_a.data != curr_b.data):
-            return False
-        curr_a, curr_b = curr_a.next, curr_b.next
-
-    return True
+        return True
 
 
 #  Helper function
