@@ -1,6 +1,3 @@
-from data_structures.interval import Interval
-
-
 ################################################################################
 # Objective         : Given a list of intervals, sorted by starting timestamps #
 #                     merge all the overlapping intervals to produce a list    #

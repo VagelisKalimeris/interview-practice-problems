@@ -1,4 +1,4 @@
-from data_structures.binary_tree import TreeNode
+from problems.data_structures.binary_tree import TreeNode
 from problems.tree_problems import *
 
 

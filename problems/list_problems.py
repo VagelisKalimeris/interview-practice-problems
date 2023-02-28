@@ -1,4 +1,4 @@
-from data_structures.singly_linked_list import *
+from problems.data_structures.singly_linked_list import SingleListNode
 
 
 ################################################################################

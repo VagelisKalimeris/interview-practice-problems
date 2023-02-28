@@ -1,4 +1,4 @@
-from data_structures.interval import *
+from problems.data_structures.interval import Interval
 from problems.interval_problems import *
 
 
