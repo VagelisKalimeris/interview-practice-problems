@@ -7,7 +7,7 @@ Results of self practice.
 
 # Requirements
 
-- Python 3.10 was used for development and testing
+- Developed under Python 3.10
 - For testing install [pytest](https://docs.pytest.org/en/7.1.x/getting-started.html)
 
 # Testing
