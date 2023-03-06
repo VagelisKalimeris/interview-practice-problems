@@ -14,5 +14,3 @@ class TestPowerRaise:
         assert power(0, 0) == 0
         assert power(0, 1) == 0
         assert power(1, 1) == 1
-
-

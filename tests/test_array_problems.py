@@ -10,5 +10,3 @@ class TestSumOfThree:
     def test_non_existing_sums(self):
         assert not contains_sum_of_3(10, [1, 2, 3, 5, 3, 1, 3])
         assert not contains_sum_of_3(12, [1, 2, 3, 5, 3, 1, 3])
-
-
