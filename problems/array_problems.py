@@ -39,6 +39,3 @@ def first_and_last(arr, n):
             else:
                 last = i
     return first, last
-
-
-print(first_and_last([123, 3, 5, 5, 5, 5, 67, 123, 125], 123))
