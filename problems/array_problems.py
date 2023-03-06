@@ -20,3 +20,25 @@ def contains_sum_of_3(target, nums):
                 return True
 
     return False
+
+
+################################################################################
+# Objective         : Given a sorted array arr with possibly duplicate         #
+#                     elements, the task is to find indexes of the first and   #
+#                     last occurrences of an element n in the given array.     #
+# Time Complexity   : O(n)                                                     #
+# Space Complexity  : O(1)                                                     #
+################################################################################
+def first_and_last(arr, n):
+    first = last = None
+
+    for i in range(len(arr)):
+        if arr[i] == n:
+            if first is None:
+                first = last = i
+            else:
+                last = i
+    return first, last
+
+
+print(first_and_last([123, 3, 5, 5, 5, 5, 67, 123, 125], 123))
