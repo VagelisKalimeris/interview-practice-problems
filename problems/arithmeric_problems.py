@@ -7,7 +7,7 @@
 def power(x, n):
     # Edge case
     if n == 0:
-        return x if x is 0 else 1
+        return x if x == 0 else 1
 
     # Base case
     if n == 1:
