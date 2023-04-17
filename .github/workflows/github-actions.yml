@@ -22,7 +22,7 @@ jobs:
           pip install ruff pytest
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: flake8 Lint
-        run: flake8 --max-line-length=80
+        run: flake8 --max-line-length=90
       - name: Test with pytest
         run: |
           pytest

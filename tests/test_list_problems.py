@@ -9,15 +9,13 @@ class TestSortedListMerging:
                 SingleListNode().append_multi([50, 70, 80, 110, 140]),
                 SingleListNode().append_multi([60, 70, 120, 150, 160])
             ).list_is_identical_with(
-            SingleListNode().append_multi(
-                [50, 60, 70, 70, 80, 110, 120, 140, 150, 160])
+            SingleListNode().append_multi([50, 60, 70, 70, 80, 110, 120, 140, 150, 160])
         )
         assert merge_sorted_lists(
                 SingleListNode().append_multi([50, 70, 80, 110, 140]),
                 SingleListNode().append_multi([10, 20, 120, 160])
             ).list_is_identical_with(
-            SingleListNode().append_multi(
-                [10, 20, 50, 70, 80, 110, 120, 140, 160])
+            SingleListNode().append_multi([10, 20, 50, 70, 80, 110, 120, 140, 160])
         )
 
     def test_edge_case_sorted_list_merging(self):

@@ -12,12 +12,10 @@ def merge_sorted_lists(list_a, list_b):
     curr_a, curr_b = list_a, list_b
 
     while True:
-        if (curr_a and curr_b and curr_a.data < curr_b.data) or \
-                                                        (curr_a and not curr_b):
+        if (curr_a and curr_b and curr_a.data < curr_b.data) or (curr_a and not curr_b):
             res_list.append(curr_a.data)
             curr_a = curr_a.next
-        elif (curr_a and curr_b and curr_a.data > curr_b.data) or \
-                                                        (curr_b and not curr_a):
+        elif (curr_a and curr_b and curr_a.data > curr_b.data) or (curr_b and not curr_a):
             res_list.append(curr_b.data)
             curr_b = curr_b.next
         elif curr_a and curr_b and curr_a.data == curr_b.data:
