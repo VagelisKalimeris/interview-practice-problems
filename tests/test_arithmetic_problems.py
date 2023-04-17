@@ -1,4 +1,4 @@
-from problems.arithmeric_problems import *
+from problems.arithmeric_problems import power
 
 
 class TestPowerRaise:

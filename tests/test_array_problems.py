@@ -1,4 +1,4 @@
-from problems.array_problems import *
+from problems.array_problems import contains_sum_of_3, first_and_last
 
 
 class TestSumOfThree:

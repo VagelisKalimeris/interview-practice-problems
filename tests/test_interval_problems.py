@@ -1,5 +1,5 @@
 from problems.data_structures.interval import Interval
-from problems.interval_problems import *
+from problems.interval_problems import merge_overlapping_intervals
 
 
 class TestOverlapMerge:

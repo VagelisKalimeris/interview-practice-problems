@@ -1,5 +1,5 @@
 from problems.data_structures.binary_tree import TreeNode
-from problems.tree_problems import *
+from problems.tree_problems import identical_trees
 
 
 class TestIdenticalTree:
