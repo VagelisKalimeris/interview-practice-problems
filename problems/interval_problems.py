@@ -29,4 +29,3 @@ def merge_overlapping_intervals(intervals):
             inter_a = inter_b
 
     return result
-

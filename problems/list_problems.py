@@ -59,7 +59,7 @@ def find_loop_in_list(lst):
 ################################################################################
 def add_inv_int_lists(list_a, list_b):
     res_list = SingleListNode()
-    curr_a, curr_b, curr_res = list_a, list_b, res_list
+    curr_a, curr_b = list_a, list_b
 
     hold = 0
     while curr_a or curr_b or hold:
